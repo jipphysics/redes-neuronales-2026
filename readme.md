@@ -24,9 +24,9 @@ Clases Lunes y Jueves:
 
 ## Preguntas frecuentes
 
-* **No recibo notificaciones:** Quienes aún no enviaron email a Pancho para que los incluya en la lista de email deben hacerlo, pues está roto el sistema de aulas virtuales y no podemos sacar de allí los correos electrónicos, y los colegas de despacho de alumnos de grado y de posgrado están saturados como para pedirles los correos electrónicos. Solo será por email y durante las clases, No habrá otro método, por eso queremos tener todos los correos. 
+* **Porqué no recibo notificaciones?** Quienes aún no enviaron email a Pancho para que los incluya en la lista de email deben hacerlo, pues está roto el sistema de aulas virtuales y no podemos sacar de allí los correos electrónicos, y los colegas de despacho de alumnos de grado y de posgrado están saturados como para pedirles los correos electrónicos. Solo será por email y durante las clases, No habrá otro método, por eso queremos tener todos los correos. 
 
-* **Inscripción:** La inscripción va hasta el viernes 14 de agosto. En la página de la materia están las instrucciones para la modalidades:
+* **Inscripción.** La inscripción va hasta el viernes 14 de agosto. En la página de la materia están las instrucciones para la modalidades:
   - Especialidad de FAMAF para Lic, en Física, Astronomía y Matemática.
   - Optativa de Lic. en Matemática aplicada (por formulario).
   - Optativa de Lic. en Cs. de la Computación (por Guaraní).
