@@ -18,6 +18,10 @@ Clases Lunes y Jueves:
 * [Prácticos de 17 a 18 hs](https://meet.google.com/mxn-kaid-oxe)
 * [Teóricos de 19 a 20 hs](https://meet.google.com/uar-gngk-exo)
 
+## Link al google drive
+
+* [google drive - redes neuronales 2026](https://drive.google.com/drive/folders/1QIoTXxSsM-DYR5huh9prlH1qH83ORwiA?usp=sharing)
+
 ## Guías de Prácticos
 
 * [Guía 1, 2026-08-10, Familiarizándose con **Google Colab** y **Python**](https://colab.research.google.com/drive/1o0rsa1NQP0uaMNDb8KFNkK6AewUkthAB?usp=sharing)
