@@ -46,8 +46,8 @@ Clases Lunes y Jueves:
   - Si son regulares, tienen que hacer, escribir y defender (el día del examen) un trabajo final integrador individual que les daremos nosotros (todos hacen el mismo sin excepción dado que son muchos).
   - Si son libres deben entregar los dos prácticos obligatorios, más el Trabajo final integrador y después aprobar un examen oral de todo e contenido conceptual de la materia (no se incluye programación).
 
-* **Aula virtual:** Esta materia no tiene aula virtual en Moodle. Nos manejaremos por medio de la página de la materia y el github de los prácticos.
+* **Aula virtual.** Esta materia no tiene aula virtual en Moodle. Nos manejaremos por medio de la página de la materia y el github de los prácticos.
 
-* **Preguntas de contenidos:** Dada la cantidad, no atendemos consultas de contenido de la materia por email. Solo en las clases teóricas, prácticas y consultas. 
+* **Preguntas de contenidos.** Dada la cantidad, no atendemos consultas de contenido de la materia por email. Solo en las clases teóricas, prácticas y consultas. 
 
-* **Preguntas administrativas:** Consultar la página para ver si la respuesta no está ya allí. En dicho caso, consultar a Pancho.
+* **Preguntas administrativas.** Consultar la página para ver si la respuesta no está ya allí. En dicho caso, consultar a Pancho.
