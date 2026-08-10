@@ -50,4 +50,4 @@ Clases Lunes y Jueves:
 
 * **Preguntas de contenidos.** Dada la cantidad, no atendemos consultas de contenido de la materia por email. Solo en las clases teóricas, prácticas y consultas. 
 
-* **Preguntas administrativas.** Consultar la página para ver si la respuesta no está ya allí. En dicho caso, consultar a Pancho.
+* **Preguntas administrativas.** Consultar la página para ver si la respuesta ya existe. Si no existe, consultar a Pancho por email.
