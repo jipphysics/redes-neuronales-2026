@@ -26,6 +26,10 @@ Clases Lunes y Jueves:
 
 * [Guía 1, 2026-08-10, Familiarizándose con **Google Colab** y **Python**](https://colab.research.google.com/drive/1o0rsa1NQP0uaMNDb8KFNkK6AewUkthAB?usp=sharing)
 
+## Videos a las clases
+
+* [Clase 1, 2026-08-13, Familiarizándose con **Google Colab** y **Python** ](https://drive.google.com/file/d/1L2LhUaZmaxZzQapb5pGwCxic9nHo8305/view?usp=sharing)
+
 ## Preguntas frecuentes
 
 * **Porqué no recibo notificaciones?** Quienes aún no enviaron email a Pancho para que los incluya en la lista de email deben hacerlo, pues está roto el sistema de aulas virtuales y no podemos sacar de allí los correos electrónicos, y los colegas de despacho de alumnos de grado y de posgrado están saturados como para pedirles los correos electrónicos. Solo será por email y durante las clases, No habrá otro método, por eso queremos tener todos los correos. 
