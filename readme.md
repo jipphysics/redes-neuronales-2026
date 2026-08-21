@@ -28,7 +28,10 @@ Clases Lunes y Jueves:
 
 ## Videos a las clases
 
-* [Clase 1, 2026-08-13, Familiarizándose con **Google Colab** y **Python** ](https://drive.google.com/file/d/1L2LhUaZmaxZzQapb5pGwCxic9nHo8305/view?usp=sharing)
+* [Clase 1, 2026-08-13, Familiarizándose con **Google Colab** y **Python**](https://drive.google.com/file/d/1L2LhUaZmaxZzQapb5pGwCxic9nHo8305/view?usp=sharing)
+* [Clase 2, 2026-08-20, Familiarizándose con **Google Colab** y **Python**, cont. 1](https://drive.google.com/file/d/18kVl_Qi8r57EuiMFOUbbbWB-UjvxQX3r/view?usp=sharing)
+
+## Tutoriales
 
 ## Preguntas frecuentes
 
