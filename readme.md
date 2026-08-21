@@ -33,6 +33,8 @@ Clases Lunes y Jueves:
 
 ## Tutoriales
 
+* [Tutorial Guía 1](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tutoriales/2026-Guia_1_Hints_TMO_v4.pdf)
+
 ## Preguntas frecuentes
 
 * **Porqué no recibo notificaciones?** Quienes aún no enviaron email a Pancho para que los incluya en la lista de email deben hacerlo, pues está roto el sistema de aulas virtuales y no podemos sacar de allí los correos electrónicos, y los colegas de despacho de alumnos de grado y de posgrado están saturados como para pedirles los correos electrónicos. Solo será por email y durante las clases, No habrá otro método, por eso queremos tener todos los correos. 
