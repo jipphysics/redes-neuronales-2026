@@ -25,6 +25,7 @@ Clases Lunes y Jueves:
 ## Guías de Prácticos
 
 * [Guía 1, 2026-08-10, Familiarizándose con **Google Colab** y **Python**](https://colab.research.google.com/drive/1o0rsa1NQP0uaMNDb8KFNkK6AewUkthAB?usp=sharing)
+* [Guía 2, 2026-08-24, Familiarizandose con **Numpy**](https://colab.research.google.com/drive/1Uy_PKHkKUBpvdAznpZW7zHXt8CPwyBVe?usp=sharing)
 
 ## Videos a las clases
 
