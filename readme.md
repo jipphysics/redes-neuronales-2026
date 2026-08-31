@@ -26,6 +26,7 @@ Clases Lunes y Jueves:
 
 * [Guía 1, 2026-08-10, Familiarizándose con **Google Colab** y **Python**](https://colab.research.google.com/drive/1o0rsa1NQP0uaMNDb8KFNkK6AewUkthAB?usp=sharing)
 * [Guía 2, 2026-08-24, Familiarizandose con **Numpy**](https://colab.research.google.com/drive/1Uy_PKHkKUBpvdAznpZW7zHXt8CPwyBVe?usp=sharing)
+* [Guía 3, 2026-08-31, # Algebra lineal con **SciPy**](https://colab.research.google.com/drive/1p9a3vplAUY73O7D8CdTRbT4-l5fPu_Je?usp=sharing)
 
 ## Videos a las clases
 
