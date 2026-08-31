@@ -34,6 +34,7 @@ Clases Lunes y Jueves:
 * [Clase 2, 2026-08-20, Familiarizándose con **Google Colab** y **Python**, cont. 1](https://drive.google.com/file/d/18kVl_Qi8r57EuiMFOUbbbWB-UjvxQX3r/view?usp=sharing)
 * [Clase 3, 2026-08-24, Familiarizándose con **Google Colab** y **Python**, cont. 2](https://drive.google.com/file/d/14aJWqlMNlqmRFEqltUwK_YX36SjCStC1/view?usp=sharing)
 * [Clase 4, 2026-08-27, Familiarizandose con **Numpy**](https://drive.google.com/file/d/1OBq5vXjwPDWSfIPj0DidKh0ZjdAh9EHY/view?usp=sharing)
+* [Clase 5, 2026-08-31, Algebra lineal con **SciPy**](https://drive.google.com/file/d/1q2O2BXxkmXUarymp2k7TBbkVc2gBrjVO/view?usp=sharing)
 
 ## Tutoriales
 
