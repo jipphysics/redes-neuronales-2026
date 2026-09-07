@@ -10,6 +10,7 @@
 * Prácticos:
   * [Dr. Juan I. Perotti](mailto:juan.perotti@unc.edu.ar) 
   * [Dr. Tristán Osán](mailto:tristan.osan@unc.edu.ar)
+  * [Lic. Franco Alejandro Milana](mailto:francomilana@unc.edu.ar)  
 
 ## Salas virtuales
 
