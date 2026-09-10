@@ -40,6 +40,7 @@ Clases Lunes y Jueves:
 * [Clase 5, 2026-08-31, Algebra lineal con **SciPy**](https://drive.google.com/file/d/1q2O2BXxkmXUarymp2k7TBbkVc2gBrjVO/view?usp=sharing)
 * [Clase 6, 2026-09-03, Descomposicion de Valores Singulares. Integrador de EDOs](https://drive.google.com/file/d/1kP2oExz0VSh-EprVoCk3XZrpkoFByJfP/view?usp=sharing)
 * [Clase 7, 2026-09-07, Integrador de EDOs, cont. 1](https://drive.google.com/file/d/1qYUlfeInpyD-7ASVRXYEGJgSQyWxSz1I/view?usp=sharing)
+* [Clase 8, 2026-09-10, Integrador de EDOs, cont. 2. El modelo *Integrate and Fire*](https://drive.google.com/file/d/1KfHdH0XmCivd8Mcc7T_u5j5FZnrwU65l/view?usp=drive_link)
 
 ## Tutoriales
 
