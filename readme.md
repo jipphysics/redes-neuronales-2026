@@ -29,6 +29,7 @@ Clases Lunes y Jueves:
 * [Guía 2, 2026-08-24, Familiarizandose con **Numpy**](https://colab.research.google.com/drive/1Uy_PKHkKUBpvdAznpZW7zHXt8CPwyBVe?usp=sharing)
 * [Guía 3, 2026-08-31, Algebra lineal con **SciPy**](https://colab.research.google.com/drive/1p9a3vplAUY73O7D8CdTRbT4-l5fPu_Je?usp=sharing)
 * [Guía 4, 2026-09-03, Integración numérica de ODEs](https://colab.research.google.com/drive/1VQNDOWPlGMWl7cl2LoStpSjy8aAAbJdj?usp=sharing)
+* [Guía 5, 2026-09-10, El modelo *Integrate and Fire*](https://colab.research.google.com/drive/1_fn87Fo9DWIwYuaekc4m2zOe6zX8qpqH?usp=drive_link)
 
 ## Videos a las clases
 
