@@ -42,6 +42,10 @@ Clases Lunes y Jueves:
 * [Clase 7, 2026-09-07, Integrador de EDOs, cont. 1](https://drive.google.com/file/d/1qYUlfeInpyD-7ASVRXYEGJgSQyWxSz1I/view?usp=sharing)
 * [Clase 8, 2026-09-10, Integrador de EDOs, cont. 2. El modelo *Integrate and Fire*](https://drive.google.com/file/d/1KfHdH0XmCivd8Mcc7T_u5j5FZnrwU65l/view?usp=drive_link)
 
+## Trabajos Practicos
+
+* [Plantilla LaTeX en Overleaf](https://www.overleaf.com/read/qwctszcmgpkn#ed2041)
+
 ## Tutoriales
 
 * [Tutorial Guía 1](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tutoriales/2026-Guia_1_Hints_TMO_v4.pdf)
