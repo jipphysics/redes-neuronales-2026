@@ -43,6 +43,7 @@ Clases Lunes y Jueves:
 * [Clase 7, 2026-09-07, Integrador de EDOs, cont. 1](https://drive.google.com/file/d/1qYUlfeInpyD-7ASVRXYEGJgSQyWxSz1I/view?usp=sharing)
 * [Clase 8, 2026-09-10, Integrador de EDOs, cont. 2. El modelo *Integrate and Fire*](https://drive.google.com/file/d/1KfHdH0XmCivd8Mcc7T_u5j5FZnrwU65l/view?usp=drive_link)
 * [Clase 9, 2026-09-14, El modelo *Integrate and Fire*, cont. 1](https://drive.google.com/file/d/1U8-aUmO8N3yO6TRNc28wmskdH_hBS3dR/view?usp=sharing)
+* [Clase 10, 2026-09-21, El modelo de *Izhikevich*](https://drive.google.com/file/d/1BxO54z5luqZP6m5TnzmA62XhT1YwxhkL/view?usp=sharing)
 
 ## Trabajos Practicos
 
