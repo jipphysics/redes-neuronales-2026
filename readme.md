@@ -47,6 +47,8 @@ Clases Lunes y Jueves:
 ## Trabajos Practicos
 
 * [Plantilla LaTeX en Overleaf](https://www.overleaf.com/read/qwctszcmgpkn#ed2041)
+* [Libro de Izhikevich](https://www.izhikevich.org/publications/dsn.pdf)
+* [Página de Izhikevich](https://www.izhikevich.org/publications/index.htm)
 
 ## Tutoriales
 
