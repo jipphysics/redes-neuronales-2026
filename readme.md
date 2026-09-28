@@ -55,7 +55,7 @@ Clases Lunes y Jueves:
 * [Plantilla comprimida en archivo .zip](https://github.com/jipphysics/redes-neuronales-2026/blob/main/plantilla-tp.zip)
 * [Libro de Izhikevich](https://www.izhikevich.org/publications/dsn.pdf)
 * [Página de Izhikevich](https://www.izhikevich.org/publications/index.htm)
-* [TP1](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tp1-2026.pdf)
+* [TP1 (fecha de entrega: Jueves 15 de octubre de 2026 a las 23:59:49 hs)](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tp1-2026.pdf)
 
 ## Tutoriales
 
