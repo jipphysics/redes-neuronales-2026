@@ -49,6 +49,8 @@ Clases Lunes y Jueves:
 
 ## Trabajos Practicos
 
+### TP1
+
 * [Plantilla LaTeX en Overleaf](https://www.overleaf.com/read/qwctszcmgpkn#ed2041)
 * [Plantilla comprimida en archivo .zip](https://github.com/jipphysics/redes-neuronales-2026/blob/main/plantilla-tp.zip)
 * [Libro de Izhikevich](https://www.izhikevich.org/publications/dsn.pdf)
