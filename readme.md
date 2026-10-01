@@ -41,13 +41,14 @@ Clases Lunes y Jueves:
 * [Clase 3, 2026-08-24, Familiarizándose con **Google Colab** y **Python**, cont. 2](https://drive.google.com/file/d/14aJWqlMNlqmRFEqltUwK_YX36SjCStC1/view?usp=sharing)
 * [Clase 4, 2026-08-27, Familiarizandose con **Numpy**](https://drive.google.com/file/d/1OBq5vXjwPDWSfIPj0DidKh0ZjdAh9EHY/view?usp=sharing)
 * [Clase 5, 2026-08-31, Algebra lineal con **SciPy**](https://drive.google.com/file/d/1q2O2BXxkmXUarymp2k7TBbkVc2gBrjVO/view?usp=sharing)
-* [Clase 6, 2026-09-03, Descomposicion de Valores Singulares. Integrador de EDOs](https://drive.google.com/file/d/1kP2oExz0VSh-EprVoCk3XZrpkoFByJfP/view?usp=sharing)
+* [Clase 6, 2026-09-03, Descomposicion de Valores Singulares (SVD). Integrador de EDOs](https://drive.google.com/file/d/1kP2oExz0VSh-EprVoCk3XZrpkoFByJfP/view?usp=sharing)
 * [Clase 7, 2026-09-07, Integrador de EDOs, cont. 1](https://drive.google.com/file/d/1qYUlfeInpyD-7ASVRXYEGJgSQyWxSz1I/view?usp=sharing)
-* [Clase 8, 2026-09-10, Integrador de EDOs, cont. 2. El modelo *Integrate and Fire*](https://drive.google.com/file/d/1KfHdH0XmCivd8Mcc7T_u5j5FZnrwU65l/view?usp=drive_link)
-* [Clase 9, 2026-09-14, El modelo *Integrate and Fire*, cont. 1](https://drive.google.com/file/d/1U8-aUmO8N3yO6TRNc28wmskdH_hBS3dR/view?usp=sharing)
-* [Clase 10, 2026-09-21, El modelo de *Izhikevich*](https://drive.google.com/file/d/1BxO54z5luqZP6m5TnzmA62XhT1YwxhkL/view?usp=sharing)
-* [Clase 11, 2026-09-24, El modelo de *Izhikevich*, cont. 1. Presentación del TP1](https://drive.google.com/file/d/15R2HFToGM6s_gR1XBUyEbsDw_uxW3CPi/view?usp=sharing)
-* [Clase 12, 2026-09-28, El modelo de *Izhikevich*, cont. 2. Caos I: la ecuación de Lorenz](https://drive.google.com/file/d/1VpO0PbbjZTpG9zNAIG4lZbJGXS7GOBNn/view?usp=sharing)
+* [Clase 8, 2026-09-10, Integrador de EDOs, cont. 2. El modelo **Integrate and Fire**](https://drive.google.com/file/d/1KfHdH0XmCivd8Mcc7T_u5j5FZnrwU65l/view?usp=drive_link)
+* [Clase 9, 2026-09-14, El modelo **Integrate and Fire**, cont. 1](https://drive.google.com/file/d/1U8-aUmO8N3yO6TRNc28wmskdH_hBS3dR/view?usp=sharing)
+* [Clase 10, 2026-09-21, El modelo de **Izhikevich**](https://drive.google.com/file/d/1BxO54z5luqZP6m5TnzmA62XhT1YwxhkL/view?usp=sharing)
+* [Clase 11, 2026-09-24, El modelo de **Izhikevich**, cont. 1. Presentación del TP1](https://drive.google.com/file/d/15R2HFToGM6s_gR1XBUyEbsDw_uxW3CPi/view?usp=sharing)
+* [Clase 12, 2026-09-28, El modelo de **Izhikevich**, cont. 2. Caos I: la ecuación de Lorenz](https://drive.google.com/file/d/1VpO0PbbjZTpG9zNAIG4lZbJGXS7GOBNn/view?usp=sharing)
+* [Clase 13, 2026-10-01, El modelo de **Hodking & Huxley**](https://drive.google.com/file/d/1SqDm8HngsTVo5oRUxDA6poY6kDVXeyLL/view?usp=sharing)
 
 ## Trabajos Practicos
 
