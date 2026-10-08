@@ -51,6 +51,7 @@ Clases Lunes y Jueves:
 * [Clase 12, 2026-09-28, El modelo de **Izhikevich**, cont. 2. Caos I: la ecuación de Lorenz](https://drive.google.com/file/d/1VpO0PbbjZTpG9zNAIG4lZbJGXS7GOBNn/view?usp=sharing)
 * [Clase 13, 2026-10-01, El modelo de **Hodking & Huxley**](https://drive.google.com/file/d/1SqDm8HngsTVo5oRUxDA6poY6kDVXeyLL/view?usp=sharing)
 * [Clase 14, 2026-10-05, Perceptrón simple](https://drive.google.com/file/d/12SPQ21YVoXUK6tcrKWuTpGVb0jrw-l_U/view?usp=sharing)
+* [Clase 15, 2026-10-08, Perceptrón simple, cont. 1](https://drive.google.com/file/d/1oJGdOloyarKElSIApkemp60aEPpUl0KA/view?usp=sharing)
 
 ## Trabajos Practicos
 
