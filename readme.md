@@ -69,7 +69,9 @@ Clases Lunes y Jueves:
 * [Tutorial Guía 3](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tutoriales/2026-Guia_3_Hints_TMO_v1.pdf)
 * [Tutorial Guía 4](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tutoriales/2026-RN-Ayudas_GUIA_4_TMO_v10.pdf)
 * [Tutorial Guía 5](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tutoriales/2026-RN-Ayudas_GUIA_5_TMO_v6.pdf)
-* [Tutorial Guía 9](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tutoriales/2026-RN-Redes_FF_Pytorch_TMO_v1.pdf)
+* [Tutorial Guía 9: PyTorch](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tutoriales/2026-RN-Redes_FF_Pytorch_TMO_v1.pdf)
+* [Tutorial Guía 9: perceptrón simple](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tutoriales/tutorial_perceptron_OR_v2.pdf)
+* [Tutorial Guía 9: filminas](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tutoriales/G9_beamer_v8.pdf)
 
 ## Preguntas frecuentes
 
