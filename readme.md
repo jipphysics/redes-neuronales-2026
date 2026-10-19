@@ -52,7 +52,7 @@ Clases Lunes y Jueves:
 * [Clase 13, 2026-10-01, El modelo de **Hodking & Huxley**](https://drive.google.com/file/d/1SqDm8HngsTVo5oRUxDA6poY6kDVXeyLL/view?usp=sharing)
 * [Clase 14, 2026-10-05, Perceptrón simple](https://drive.google.com/file/d/12SPQ21YVoXUK6tcrKWuTpGVb0jrw-l_U/view?usp=sharing)
 * [Clase 15, 2026-10-08, Perceptrón simple, cont. 1](https://drive.google.com/file/d/1oJGdOloyarKElSIApkemp60aEPpUl0KA/view?usp=sharing)
-* **Feriado, 2026-10-12, Día de la diversidad cultural**
+* **Feriado, 2026-10-12, Día del Respeto a la Diversidad Cultural**
 * **Paro, 2026-10-16, Marcha Universitaria**
 * [Clase 16, 2026-10-19, Perceptrón simple, cont. 2](https://drive.google.com/file/d/1ZJD1uCDg8WeE76JHjnaXKS42UYt0A6aB/view?usp=sharing)
 
