@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ganale al Pong a PatricIA</title>
+<style>
+  :root {
+    --bg: #0b0e14;
+    --panel: #151a26;
+    --fg: #e6e9ef;
+    --muted: #8a93a6;
+    --accent: #ffd166;
+    --exc: #ff4646;
+    --inh: #468cff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 16px;
+    background: var(--bg); color: var(--fg);
+    font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  header {
+    width: 100%; max-width: 1000px; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 18px;
+  }
+  .logo { height: 96px; width: 139px; object-fit: contain; background: #fff; border-radius: 10px; padding: 4px; flex: none; }
+  h1 { font-size: 22px; margin: 0 0 4px; letter-spacing: .02em; }
+  h1 .ia { color: var(--accent); }
+  .sub { color: var(--muted); margin: 0; }
+  @media (max-width: 600px) {
+    header { flex-direction: column; text-align: center; gap: 10px; }
+    .logo { height: 80px; width: 116px; }
+  }
+  #wrap { width: 100%; max-width: 1000px; }
+  canvas {
+    width: 100%; height: auto; display: block;
+    border-radius: 10px; background: #05070b;
+    touch-action: none; cursor: none;
+    box-shadow: 0 0 0 1px #222a3a;
+  }
+  .controls {
+    display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center;
+    margin-top: 10px; background: var(--panel); padding: 10px 14px; border-radius: 10px;
+  }
+  .controls label { display: flex; align-items: center; gap: 6px; color: var(--muted); }
+  .controls output { color: var(--fg); font-variant-numeric: tabular-nums; min-width: 3.5em; }
+  button, select {
+    background: #222a3a; color: var(--fg); border: 1px solid #2f3a50;
+    border-radius: 6px; padding: 5px 10px; font: inherit; cursor: pointer;
+  }
+  button:hover, select:hover { border-color: #4a5874; }
+  input[type=range] { width: 110px; }
+  .icon { width: 14px; height: 14px; vertical-align: -2px; margin-right: 6px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--muted); margin-top: 10px; font-size: 13px; }
+  .sw { display: inline-block; width: 11px; height: 11px; border-radius: 50%; vertical-align: -1px; margin-right: 5px; }
+  .ln { display: inline-block; width: 18px; height: 3px; vertical-align: 3px; margin-right: 5px; }
+  kbd { background: #222a3a; border: 1px solid #2f3a50; border-radius: 4px; padding: 0 5px; font-size: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <img class="logo" src="conifest2026.jpeg" alt="ConiFest 2026 — Festival por la Ciencia y la Educación Argentina">
+  <div>
+    <h1>Ganale al Pong a Patric<span class="ia">IA</span></h1>
+    <p class="sub">
+      Vos jugás a la izquierda (mouse, pantalla táctil, <kbd>W</kbd>/<kbd>S</kbd> o <kbd>↑</kbd>/<kbd>↓</kbd>),
+      y la paleta derecha la maneja PatricIA, una pequeña red neuronal que arranca al azar y aprende,
+      de su propia experiencia, adónde va a llegar la pelota. <kbd>Espacio</kbd> pausa el juego.
+    </p>
+  </div>
+</header>
+
+<div id="wrap">
+  <canvas id="field" width="1000" height="600"></canvas>
+
+  <div class="controls">
+    <button id="pauseBtn">Pausa</button>
+    <label>Velocidad
+      <select id="speed">
+        <option value="1" selected>1×</option>
+        <option value="2">2×</option>
+        <option value="5">5×</option>
+        <option value="20">20×</option>
+      </select>
+    </label>
+    <label><input type="checkbox" id="autopilot"> Piloto automático (un bot juega por vos)</label>
+    <label>Tasa de aprendizaje <input type="range" id="lr" min="0" max="100" value="75"><output id="lrOut"></output></label>
+    <label>Opacidad de la red <input type="range" id="opacity" min="0" max="100" value="85"></label>
+    <button id="resetBrain"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.3 4h7.4c-.3 2.6-1.3 4-3.7 4S4.6 6.6 4.3 4z" fill="#b3122e"/><path d="M4 1.5h8c0 3.5-.6 6.5-4 6.5S4 5 4 1.5z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M8 8v5.5M5 14.5h6" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Reiniciar cerebro</button>
+    <button id="resetScore">Reiniciar marcador</button>
+  </div>
+
+  <div class="legend">
+    <span><span class="ln" style="background:var(--exc)"></span>conexión excitatoria (+)</span>
+    <span><span class="ln" style="background:var(--inh)"></span>conexión inhibitoria (−)</span>
+    <span><span class="sw" style="background:var(--exc)"></span>neurona activada (+)</span>
+    <span><span class="sw" style="background:var(--inh)"></span>neurona desactivada (−)</span>
+    <span>grosor = |peso| · brillo = señal que circula por la conexión</span>
+    <span><span class="sw" style="background:transparent;box-shadow:inset 0 0 0 2px var(--accent)"></span>dónde PatricIA predice que llegará la pelota</span>
+  </div>
+</div>
+
+<script>
+"use strict";
+
+// ---------- Constants ----------
+const W = 1000, H = 600;
+const PW = 12, PH = 90;              // paddle width / height
+const PX = 24, AX = W - 24 - PW;     // left edge of player / AI paddles
+const R = 8;                         // ball radius
+const V0 = 6.5, VMAX = 15;           // serve speed / max ball speed (px per tick)
+const AI_SPEED = 6.5;                // max AI paddle speed
+const KEY_SPEED = 9, MOUSE_SPEED = 16, BOT_SPEED = 7;
+const MAX_ANGLE = 55 * Math.PI / 180;
+const LAYERS = [4, 12, 8, 1];
+const INPUT_LABELS = ["pelota x", "pelota y", "veloc. x", "veloc. y"];
+const OUTPUT_LABELS = ["destino y"];
+const BUF_MAX = 5000;                // experience replay capacity
+const TRAIN_PER_TICK = 20;            // SGD steps per simulation tick
+const LABEL_SCALE = 0.9;             // keep targets out of tanh saturation
+const HIST_MAX = 240;
+
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+
+// ---------- Neural network (tanh MLP, plain SGD) ----------
+class Net {
+  constructor(sizes) {
+    this.sizes = sizes;
+    this.w = [];
+    this.b = [];
+    for (let l = 0; l < sizes.length - 1; l++) {
+      const nin = sizes[l], nout = sizes[l + 1];
+      const s = 1.5 * Math.sqrt(6 / (nin + nout));
+      this.w.push(Array.from({ length: nout }, () =>
+        Array.from({ length: nin }, () => (Math.random() * 2 - 1) * s)));
+      this.b.push(Array.from({ length: nout }, () => (Math.random() * 2 - 1) * 0.2));
+    }
+  }
+
+  // Returns the activations of every layer (layer 0 = inputs).
+  forward(x) {
+    const acts = [x.slice()];
+    let a = x;
+    for (let l = 0; l < this.w.length; l++) {
+      const w = this.w[l], b = this.b[l], out = new Array(w.length);
+      for (let j = 0; j < w.length; j++) {
+        const wj = w[j];
+        let z = b[j];
+        for (let i = 0; i < a.length; i++) z += wj[i] * a[i];
+        out[j] = Math.tanh(z);
+      }
+      acts.push(out);
+      a = out;
+    }
+    return acts;
+  }
+
+  // One backprop step on squared error; returns the loss.
+  train(x, target, lr) {
+    const acts = this.forward(x);
+    const L = this.w.length, y = acts[L];
+    let loss = 0;
+    let delta = y.map((v, k) => {
+      const e = v - target[k];
+      loss += 0.5 * e * e;
+      return e * (1 - v * v);
+    });
+    for (let l = L - 1; l >= 0; l--) {
+      const a = acts[l], w = this.w[l], b = this.b[l];
+      let prev = null;
+      if (l > 0) {
+        prev = new Array(a.length).fill(0);
+        for (let j = 0; j < w.length; j++)
+          for (let i = 0; i < a.length; i++) prev[i] += w[j][i] * delta[j];
+        for (let i = 0; i < a.length; i++) prev[i] *= 1 - a[i] * a[i];
+      }
+      for (let j = 0; j < w.length; j++) {
+        const g = lr * delta[j], wj = w[j];
+        for (let i = 0; i < a.length; i++) wj[i] -= g * a[i];
+        b[j] -= g;
+      }
+      delta = prev;
+    }
+    return loss;
+  }
+}
+
+// ---------- State ----------
+const game = {
+  ball: { x: W / 2, y: H / 2, vx: 0, vy: 0 },
+  player: { y: H / 2 },
+  ai: { y: H / 2 },
+  score: [0, 0],
+  serveTimer: 60,
+  serveDir: 1,
+};
+let net, buffer, bufPos, pending, stats, vizActs, aiPred;
+let tickCount = 0;
+let paused = false, speed = 1, autopilot = false;
+let lr = 0, netOpacity = 0.85;
+let playerTarget = H / 2, keys = { up: false, down: false }, botOffset = 0;
+const trail = [];
+
+function resetBrain() {
+  net = new Net(LAYERS);
+  buffer = [];
+  bufPos = 0;
+  pending = [];
+  stats = { steps: 0, samples: 0, lossEMA: null, lossHist: [], hitHist: [], outcomes: [], hits: 0, misses: 0 };
+  vizActs = net.forward(inputs());
+  aiPred = H / 2;
+}
+
+// ---------- Encoding ----------
+function inputs() {
+  const b = game.ball;
+  return [b.x / W * 2 - 1, b.y / H * 2 - 1, b.vx / VMAX, b.vy / VMAX];
+}
+const encodeY = y => (y / H * 2 - 1) * LABEL_SCALE;
+const decodeY = v => (v / LABEL_SCALE + 1) / 2 * H;
+
+// ---------- Game logic ----------
+function serve() {
+  const b = game.ball;
+  const ang = (Math.random() * 2 - 1) * 30 * Math.PI / 180;
+  b.x = W / 2;
+  b.y = H / 2 + (Math.random() * 2 - 1) * H * 0.3;
+  b.vx = game.serveDir * V0 * Math.cos(ang);
+  b.vy = V0 * Math.sin(ang);
+  pending = [];
+  trail.length = 0;
+}
+
+function bounce(dir, cy, paddleY) {
+  const b = game.ball;
+  const off = clamp((cy - paddleY) / (PH / 2), -1, 1);
+  const ang = off * MAX_ANGLE;
+  const sp = Math.min(VMAX, Math.hypot(b.vx, b.vy) + 0.4);
+  b.vx = dir * sp * Math.cos(ang);
+  b.vy = sp * Math.sin(ang);
+}
+
+function moveToward(p, target, maxStep) {
+  p.y += clamp(target - p.y, -maxStep, maxStep);
+  p.y = clamp(p.y, PH / 2, H - PH / 2);
+}
+
+function movePlayer() {
+  const p = game.player, b = game.ball;
+  if (autopilot) {
+    const target = b.vx < 0 ? b.y + botOffset : H / 2;
+    moveToward(p, target, BOT_SPEED);
+  } else if (keys.up || keys.down) {
+    p.y = clamp(p.y + (keys.down - keys.up) * KEY_SPEED, PH / 2, H - PH / 2);
+    playerTarget = p.y;
+  } else {
+    moveToward(p, playerTarget, MOUSE_SPEED);
+  }
+}
+
+// The ball reached the AI's line: label every state seen on the way with the true arrival y.
+function commitExperience(arrivalY) {
+  const t = encodeY(arrivalY);
+  for (const x of pending) {
+    if (buffer.length < BUF_MAX) buffer.push({ x, t });
+    else { buffer[bufPos] = { x, t }; bufPos = (bufPos + 1) % BUF_MAX; }
+    stats.samples++;
+  }
+  pending = [];
+}
+
+function recordOutcome(hit) {
+  hit ? stats.hits++ : stats.misses++;
+  stats.outcomes.push(hit ? 1 : 0);
+  if (stats.outcomes.length > 20) stats.outcomes.shift();
+  const rate = stats.outcomes.reduce((s, v) => s + v, 0) / stats.outcomes.length;
+  stats.hitHist.push(rate);
+  if (stats.hitHist.length > HIST_MAX) stats.hitHist.shift();
+}
+
+function trainStep() {
+  if (buffer.length < 16 || lr <= 0) return;
+  for (let k = 0; k < TRAIN_PER_TICK; k++) {
+    const s = buffer[(Math.random() * buffer.length) | 0];
+    const loss = net.train(s.x, [s.t], lr);
+    stats.lossEMA = stats.lossEMA == null ? loss : stats.lossEMA * 0.995 + loss * 0.005;
+    stats.steps++;
+  }
+  if (tickCount % 20 === 0 && stats.lossEMA != null) {
+    stats.lossHist.push(errorPx());
+    if (stats.lossHist.length > HIST_MAX) stats.lossHist.shift();
+  }
+}
+
+// Typical prediction error in pixels, derived from the running loss.
+function errorPx() {
+  return Math.sqrt(2 * (stats.lossEMA || 0)) / LABEL_SCALE * H / 2;
+}
+
+function tick() {
+  tickCount++;
+  const b = game.ball;
+
+  movePlayer();
+
+  // AI: run the network on the current state and chase its prediction
+  vizActs = net.forward(inputs());
+  aiPred = clamp(decodeY(vizActs[vizActs.length - 1][0]), 0, H);
+  moveToward(game.ai, b.vx > 0 ? aiPred : H / 2, AI_SPEED);
+
+  if (game.serveTimer > 0) {
+    if (--game.serveTimer === 0) serve();
+    trainStep();
+    return;
+  }
+
+  if (b.vx > 0 && b.x + R <= AX && tickCount % 3 === 0) pending.push(inputs());
+
+  const px = b.x, py = b.y;
+  b.x += b.vx;
+  b.y += b.vy;
+  if (b.y < R) { b.y = 2 * R - b.y; b.vy = -b.vy; }
+  if (b.y > H - R) { b.y = 2 * (H - R) - b.y; b.vy = -b.vy; }
+
+  // Player paddle (swept test so fast balls can't tunnel)
+  const pFace = PX + PW;
+  if (b.vx < 0 && px - R >= pFace && b.x - R < pFace) {
+    const f = (px - R - pFace) / (px - b.x);
+    const cy = clamp(py + (b.y - py) * f, R, H - R);
+    if (Math.abs(cy - game.player.y) <= PH / 2 + R) {
+      bounce(1, cy, game.player.y);
+      b.x = pFace + R; b.y = cy;
+      botOffset = (Math.random() * 2 - 1) * PH * 0.45;
+    }
+  }
+
+  // AI paddle
+  if (b.vx > 0 && px + R <= AX && b.x + R > AX) {
+    const f = (AX - (px + R)) / (b.x - px);
+    const cy = clamp(py + (b.y - py) * f, R, H - R);
+    commitExperience(cy);
+    const hit = Math.abs(cy - game.ai.y) <= PH / 2 + R;
+    recordOutcome(hit);
+    if (hit) { bounce(-1, cy, game.ai.y); b.x = AX - R; b.y = cy; }
+  }
+
+  // Scoring
+  if (b.x < -2 * R || b.x > W + 2 * R) {
+    const aiScored = b.x < 0;
+    game.score[aiScored ? 1 : 0]++;
+    game.serveDir = aiScored ? -1 : 1;   // serve towards whoever lost the point
+    b.vx = b.vy = 0;
+    b.x = W / 2; b.y = H / 2;
+    game.serveTimer = 45;
+    pending = [];
+  }
+
+  if (tickCount % 2 === 0) {
+    trail.push({ x: b.x, y: b.y });
+    if (trail.length > 12) trail.shift();
+  }
+
+  trainStep();
+}
+
+// ---------- Rendering ----------
+const cv = document.getElementById("field");
+const ctx = cv.getContext("2d");
+
+function resizeCanvas() {
+  const d = window.devicePixelRatio || 1;
+  cv.width = W * d;
+  cv.height = H * d;
+  ctx.setTransform(d, 0, 0, d, 0, 0);
+}
+
+const EXC = [255, 70, 70], INH = [70, 140, 255];
+const rgba = (c, a) => `rgba(${c[0]},${c[1]},${c[2]},${a})`;
+
+// Network occupies the middle of the field
+const NET_BOX = { x0: 300, x1: 700, y0: 100, y1: 470 };
+
+function nodePositions() {
+  const pos = [];
+  const n = LAYERS.length;
+  for (let l = 0; l < n; l++) {
+    const x = NET_BOX.x0 + (NET_BOX.x1 - NET_BOX.x0) * l / (n - 1);
+    const cnt = LAYERS[l];
+    const gap = Math.min(34, (NET_BOX.y1 - NET_BOX.y0) / cnt);
+    const cy = (NET_BOX.y0 + NET_BOX.y1) / 2;
+    pos.push(Array.from({ length: cnt }, (_, i) => ({ x, y: cy + (i - (cnt - 1) / 2) * gap })));
+  }
+  return pos;
+}
+const NODES = nodePositions();
+
+function drawNetwork() {
+  if (netOpacity <= 0) return;
+  ctx.save();
+  ctx.globalAlpha = netOpacity;
+
+  // Connections: colour = sign of weight, width = |weight|, brightness = signal |w·a|
+  for (let l = 0; l < net.w.length; l++) {
+    const w = net.w[l], src = NODES[l], dst = NODES[l + 1], a = vizActs[l];
+    for (let j = 0; j < w.length; j++) {
+      for (let i = 0; i < w[j].length; i++) {
+        const wt = w[j][i];
+        const mag = Math.min(1, Math.abs(wt) / 2);
+        const flow = Math.min(1, Math.abs(wt * a[i]));
+        ctx.strokeStyle = rgba(wt >= 0 ? EXC : INH, 0.08 + 0.35 * mag + 0.55 * flow);
+        ctx.lineWidth = 0.5 + 3 * mag;
+        ctx.beginPath();
+        ctx.moveTo(src[i].x, src[i].y);
+        ctx.lineTo(dst[j].x, dst[j].y);
+        ctx.stroke();
+      }
+    }
+  }
+
+  // Line from the output neuron to the predicted arrival point
+  if (game.ball.vx > 0) {
+    const o = NODES[NODES.length - 1][0];
+    ctx.setLineDash([4, 6]);
+    ctx.strokeStyle = "rgba(255,209,102,0.45)";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(o.x + 14, o.y);
+    ctx.lineTo(AX - 14, aiPred);
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  // Neurons: fill = activation (red +, blue −)
+  for (let l = 0; l < NODES.length; l++) {
+    const r = (l === 0 || l === NODES.length - 1) ? 12 : 10;
+    NODES[l].forEach((p, i) => {
+      const act = vizActs[l][i];
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+      ctx.fillStyle = "#151a26";
+      ctx.fill();
+      ctx.fillStyle = rgba(act >= 0 ? EXC : INH, Math.min(1, Math.abs(act)));
+      ctx.fill();
+      ctx.lineWidth = 1.5;
+      ctx.strokeStyle = "rgba(200,208,224,0.6)";
+      ctx.stroke();
+    });
+  }
+
+  // Labels
+  ctx.font = "12px system-ui, sans-serif";
+  ctx.fillStyle = "rgba(200,208,224,0.8)";
+  ctx.textBaseline = "middle";
+  ctx.textAlign = "right";
+  NODES[0].forEach((p, i) => ctx.fillText(INPUT_LABELS[i], p.x - 18, p.y));
+  ctx.textAlign = "left";
+  NODES[NODES.length - 1].forEach((p, i) => ctx.fillText(OUTPUT_LABELS[i], p.x + 18, p.y));
+  ctx.textAlign = "center";
+  ctx.fillStyle = "rgba(138,147,166,0.8)";
+  const names = ["entrada", "oculta 1", "oculta 2", "salida"];
+  NODES.forEach((layer, l) => ctx.fillText(names[l] || "", layer[0].x, NET_BOX.y1 + 18));
+  ctx.restore();
+}
+
+function drawChart(x, y, w, h, data, maxV, label, value, color) {
+  ctx.save();
+  ctx.globalAlpha = Math.max(0.35, netOpacity);
+  ctx.fillStyle = "rgba(21,26,38,0.75)";
+  ctx.fillRect(x, y, w, h);
+  ctx.strokeStyle = "rgba(90,100,125,0.5)";
+  ctx.lineWidth = 1;
+  ctx.strokeRect(x + 0.5, y + 0.5, w - 1, h - 1);
+  if (data.length > 1) {
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    data.forEach((v, i) => {
+      const px = x + 4 + (w - 8) * i / (HIST_MAX - 1);
+      const py = y + h - 4 - (h - 22) * clamp(v / maxV, 0, 1);
+      i ? ctx.lineTo(px, py) : ctx.moveTo(px, py);
+    });
+    ctx.stroke();
+  }
+  ctx.font = "11px system-ui, sans-serif";
+  ctx.textBaseline = "top";
+  ctx.textAlign = "left";
+  ctx.fillStyle = "rgba(170,178,196,0.9)";
+  ctx.fillText(label, x + 6, y + 4);
+  ctx.textAlign = "right";
+  ctx.fillStyle = color;
+  ctx.fillText(value, x + w - 6, y + 4);
+  ctx.restore();
+}
+
+function draw() {
+  ctx.fillStyle = "#05070b";
+  ctx.fillRect(0, 0, W, H);
+
+  // Center line
+  ctx.strokeStyle = "rgba(255,255,255,0.08)";
+  ctx.setLineDash([10, 14]);
+  ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.moveTo(W / 2, 0); ctx.lineTo(W / 2, H); ctx.stroke();
+  ctx.setLineDash([]);
+
+  drawNetwork();
+
+  // Learning progress
+  const errMax = Math.max(60, ...stats.lossHist);
+  const err = stats.lossEMA == null ? "—" : `${errorPx().toFixed(0)} px`;
+  drawChart(300, 512, 195, 70, stats.lossHist, errMax, "error de predicción", err, "#ffd166");
+  const rate = stats.hitHist.length ? stats.hitHist[stats.hitHist.length - 1] : 0;
+  drawChart(505, 512, 195, 70, stats.hitHist, 1, "devoluciones (últimas 20)",
+            stats.hitHist.length ? `${Math.round(rate * 100)}%` : "—", "#7ee0a1");
+
+  // Score + stats
+  ctx.fillStyle = "rgba(230,233,239,0.85)";
+  ctx.font = "bold 40px system-ui, sans-serif";
+  ctx.textBaseline = "top";
+  ctx.textAlign = "right";
+  ctx.fillText(game.score[0], W / 2 - 30, 14);
+  ctx.textAlign = "left";
+  ctx.fillText(game.score[1], W / 2 + 30, 14);
+  ctx.font = "12px system-ui, sans-serif";
+  ctx.fillStyle = "rgba(138,147,166,0.9)";
+  ctx.textAlign = "center";
+  ctx.fillText(`experiencias ${stats.samples.toLocaleString("es-AR")} · pasos de entrenamiento ${stats.steps.toLocaleString("es-AR")} · PatricIA devolvió ${stats.hits} / erró ${stats.misses}`, W / 2, 64);
+  ctx.textAlign = "left";
+  ctx.fillText(autopilot ? "BOT" : "VOS", 14, 14);
+  ctx.textAlign = "right";
+  ctx.fillText("PatricIA", W - 14, 14);
+
+  // AI prediction marker
+  if (game.ball.vx > 0) {
+    ctx.strokeStyle = "#ffd166";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(AX + PW / 2, aiPred, 9, 0, Math.PI * 2);
+    ctx.stroke();
+  }
+
+  // Paddles
+  ctx.fillStyle = "#e6e9ef";
+  ctx.fillRect(PX, game.player.y - PH / 2, PW, PH);
+  ctx.fillStyle = "#ffd166";
+  ctx.fillRect(AX, game.ai.y - PH / 2, PW, PH);
+
+  // Ball + trail
+  trail.forEach((p, i) => {
+    ctx.fillStyle = `rgba(255,255,255,${0.04 + 0.2 * i / trail.length})`;
+    ctx.beginPath(); ctx.arc(p.x, p.y, R * (0.4 + 0.5 * i / trail.length), 0, Math.PI * 2); ctx.fill();
+  });
+  if (game.serveTimer === 0) {
+    ctx.fillStyle = "#fff";
+    ctx.beginPath(); ctx.arc(game.ball.x, game.ball.y, R, 0, Math.PI * 2); ctx.fill();
+  }
+
+  if (paused) {
+    ctx.fillStyle = "rgba(5,7,11,0.6)";
+    ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = "#e6e9ef";
+    ctx.font = "bold 28px system-ui, sans-serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText("En pausa — apretá Espacio", W / 2, H / 2);
+  }
+}
+
+// ---------- Main loop ----------
+const STEP_MS = 1000 / 60;
+let last = performance.now(), acc = 0;
+function frame(now) {
+  const dt = Math.min(100, now - last);
+  last = now;
+  if (!paused) {
+    acc += dt * speed;
+    let n = 0;
+    while (acc >= STEP_MS && n < 500) { tick(); acc -= STEP_MS; n++; }
+    if (n >= 500) acc = 0;
+  }
+  draw();
+  requestAnimationFrame(frame);
+}
+
+// ---------- Input & controls ----------
+function canvasY(clientY) {
+  const r = cv.getBoundingClientRect();
+  return (clientY - r.top) * H / r.height;
+}
+cv.addEventListener("mousemove", e => { playerTarget = canvasY(e.clientY); });
+cv.addEventListener("touchmove", e => { e.preventDefault(); playerTarget = canvasY(e.touches[0].clientY); }, { passive: false });
+cv.addEventListener("touchstart", e => { playerTarget = canvasY(e.touches[0].clientY); }, { passive: true });
+
+function setPaused(p) {
+  paused = p;
+  document.getElementById("pauseBtn").textContent = p ? "Seguir" : "Pausa";
+}
+
+addEventListener("keydown", e => {
+  if (e.key === "ArrowUp" || e.key === "w" || e.key === "W") { keys.up = true; e.preventDefault(); }
+  else if (e.key === "ArrowDown" || e.key === "s" || e.key === "S") { keys.down = true; e.preventDefault(); }
+  else if (e.key === " ") { setPaused(!paused); e.preventDefault(); }
+});
+addEventListener("keyup", e => {
+  if (e.key === "ArrowUp" || e.key === "w" || e.key === "W") keys.up = false;
+  else if (e.key === "ArrowDown" || e.key === "s" || e.key === "S") keys.down = false;
+});
+
+document.getElementById("pauseBtn").onclick = e => { setPaused(!paused); e.target.blur(); };
+document.getElementById("speed").onchange = e => { speed = +e.target.value; e.target.blur(); };
+document.getElementById("autopilot").onchange = e => { autopilot = e.target.checked; e.target.blur(); };
+document.getElementById("opacity").oninput = e => { netOpacity = e.target.value / 100; };
+document.getElementById("resetBrain").onclick = e => { resetBrain(); e.currentTarget.blur(); };
+document.getElementById("resetScore").onclick = e => { game.score = [0, 0]; e.target.blur(); };
+
+const lrSlider = document.getElementById("lr"), lrOut = document.getElementById("lrOut");
+function updateLr() {
+  // log scale: 0.001 … 0.1
+  lr = Math.pow(10, -3 + 2 * lrSlider.value / 100);
+  lrOut.textContent = lr.toFixed(lr < 0.01 ? 4 : 3);
+}
+lrSlider.oninput = updateLr;
+
+resizeCanvas();
+addEventListener("resize", resizeCanvas);
+updateLr();
+resetBrain();
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>
