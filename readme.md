@@ -16,7 +16,9 @@
 
 Clases Lunes y Jueves:
 
-* [Prácticos de 17 a 18 hs](https://meet.google.com/mxn-kaid-oxe)
+* **Prácticos de 17 a 18 hs**:
+  - [Sala virtual de Juan](https://meet.google.com/mxn-kaid-oxe)
+  - [Sala virtual de Tristán](https://meet.google.com/mgs-rxtg-fnm)
 * [Teóricos de 19 a 20 hs](https://meet.google.com/uar-gngk-exo)
 
 ## Link al google drive
