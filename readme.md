@@ -31,10 +31,10 @@ Clases Lunes y Jueves:
 * [Guía 4, 2026-09-03, Integración numérica de ODEs](https://colab.research.google.com/drive/1VQNDOWPlGMWl7cl2LoStpSjy8aAAbJdj?usp=sharing)
 * [Guía 5, 2026-09-10, El modelo *Integrate and Fire*](https://colab.research.google.com/drive/1_fn87Fo9DWIwYuaekc4m2zOe6zX8qpqH?usp=drive_link)
 * [Guía 6, 2026-09-21, El modelo de *Izhikevich*](https://colab.research.google.com/drive/1LzX0x1J0MWf78pVDglAbBBZZJxrisg-Z?usp=drive_link)
-* [Guía 7, 2026-09-28, Caos I: la ecuación de Lorenz](https://colab.research.google.com/drive/1Ev_6U1bO4Kd2Pl1CRhnd0vGub6TTIHa_?usp=drive_link)
-* [Guía 8, 2026-10-01, Modelo de **Hodgkin & Huxley**](https://colab.research.google.com/drive/12W-u9-S9ImglIRIQxYJwVt87zCZAOw7b?usp=drive_link)
+* [Guía 7, 2026-09-28, Caos I: la ecuación de *Lorenz*](https://colab.research.google.com/drive/1Ev_6U1bO4Kd2Pl1CRhnd0vGub6TTIHa_?usp=drive_link)
+* [Guía 8, 2026-10-01, Modelo de *Hodgkin & Huxley*](https://colab.research.google.com/drive/12W-u9-S9ImglIRIQxYJwVt87zCZAOw7b?usp=drive_link)
 * [Guía 9, 2026-10-05, Perceptrón simple](https://colab.research.google.com/drive/1r9mR9jnaiAL6T2lIfoNxI7zWXo_GN2hn?usp=drive_link)
-* [Guía 10, 2026-10-22, Autoencoder con Fashion MNIST](https://colab.research.google.com/drive/10KCPjK_BBy22YEy2NGan1cGnmxILep-a?usp=drive_link)
+* [Guía 10, 2026-10-22, Autoencoder con **Fashion MNIST**](https://colab.research.google.com/drive/10KCPjK_BBy22YEy2NGan1cGnmxILep-a?usp=drive_link)
 
 ## Videos a las clases
 
