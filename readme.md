@@ -59,6 +59,7 @@ Clases Lunes y Jueves:
 * **Paro, 2026-10-16, Marcha Universitaria**
 * [Clase 16, 2026-10-19, Perceptrón simple, cont. 2](https://drive.google.com/file/d/1ZJD1uCDg8WeE76JHjnaXKS42UYt0A6aB/view?usp=sharing)
 * [Clase 17, 2026-10-22, Autoencoder](https://drive.google.com/file/d/1XGpTUOseaaQQ0nVkgMP7J36wf6vL56xE/view?usp=drive_link)
+* [Clase 18, 2026-10-23, Autoencoder, cont. 1](https://drive.google.com/file/d/1Ff5ONSXaZUwXylBPHsdMlyRvzZ02bDSx/view?usp=drive_link)
 
 ## Trabajos Practicos
 
