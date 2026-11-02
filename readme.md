@@ -37,6 +37,7 @@ Clases Lunes y Jueves:
 * [Guía 8, 2026-10-01, Modelo de *Hodgkin & Huxley*](https://colab.research.google.com/drive/12W-u9-S9ImglIRIQxYJwVt87zCZAOw7b?usp=drive_link)
 * [Guía 9, 2026-10-05, Perceptrón simple](https://colab.research.google.com/drive/1r9mR9jnaiAL6T2lIfoNxI7zWXo_GN2hn?usp=drive_link)
 * [Guía 10, 2026-10-22, Autoencoder con **Fashion MNIST**](https://colab.research.google.com/drive/10KCPjK_BBy22YEy2NGan1cGnmxILep-a?usp=drive_link)
+* [Guía 11, 2026-11-02, Clasificador con **Fashion MNIST**](https://drive.google.com/file/d/17jb0y0AjVNEkUpV1WrvePu1kSgw_gtRe/view?usp=drive_link)
 
 ## Videos a las clases
 
