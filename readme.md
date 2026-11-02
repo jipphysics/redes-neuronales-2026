@@ -63,13 +63,18 @@ Clases Lunes y Jueves:
 
 ## Trabajos Practicos
 
-### TP1
-
 * [Plantilla LaTeX en Overleaf](https://www.overleaf.com/read/qwctszcmgpkn#ed2041)
 * [Plantilla comprimida en archivo .zip](https://github.com/jipphysics/redes-neuronales-2026/blob/main/plantilla-tp.zip)
+
+### TP1
+
 * [Libro de Izhikevich](https://www.izhikevich.org/publications/dsn.pdf)
 * [Página de Izhikevich](https://www.izhikevich.org/publications/index.htm)
 * [TP1 (fecha de entrega: Jueves 15 de octubre de 2026 a las 23:59:49 hs)](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tp1-2026.pdf)
+
+### TP2
+
+* [TP2 (fecha de entrega: Lunes 23 de noviembre de 2026 a las 23:59:49 hs)](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tp2-2026.pdf)
 
 ## Tutoriales
 
