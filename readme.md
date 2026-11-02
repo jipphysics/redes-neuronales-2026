@@ -75,7 +75,7 @@ Clases Lunes y Jueves:
 
 ### TP2
 
-* [TP2 (fecha de entrega: Lunes 23 de noviembre de 2026 a las 23:59:49 hs)](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tp2-2026.pdf)
+* [TP2 (fecha de entrega: Jueves 19 de noviembre de 2026 a las 23:59:49 hs)](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tp2-2026.pdf)
 
 ## Tutoriales
 
