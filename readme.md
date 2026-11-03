@@ -59,9 +59,10 @@ Clases Lunes y Jueves:
 * **Feriado, 2026-10-12, Día del Respeto a la Diversidad Cultural**
 * **Paro, 2026-10-16, Marcha Universitaria**
 * [Clase 16, 2026-10-19, Perceptrón simple, cont. 2](https://drive.google.com/file/d/1ZJD1uCDg8WeE76JHjnaXKS42UYt0A6aB/view?usp=sharing)
-* [Clase 17, 2026-10-22, Autoencoder](https://drive.google.com/file/d/1XGpTUOseaaQQ0nVkgMP7J36wf6vL56xE/view?usp=drive_link)
-* [Clase 18, 2026-10-23, Autoencoder, cont. 1](https://drive.google.com/file/d/1Ff5ONSXaZUwXylBPHsdMlyRvzZ02bDSx/view?usp=drive_link)
-* [Clase 19, 2026-10-29, Autoencoder, cont. 2](https://drive.google.com/file/d/1b6TMgs5lg07mTfoOtBCH0qSAOVrknuy-/view?usp=sharing)
+* [Clase 17, 2026-10-22, Autoencoder con **Fashion MNIST**](https://drive.google.com/file/d/1XGpTUOseaaQQ0nVkgMP7J36wf6vL56xE/view?usp=drive_link)
+* [Clase 18, 2026-10-23, Autoencoder con **Fashion MNIST**, cont. 1](https://drive.google.com/file/d/1Ff5ONSXaZUwXylBPHsdMlyRvzZ02bDSx/view?usp=drive_link)
+* [Clase 19, 2026-10-29, Autoencoder con **Fashion MNIST**, cont. 2](https://drive.google.com/file/d/1b6TMgs5lg07mTfoOtBCH0qSAOVrknuy-/view?usp=sharing)
+* [Clase 20, 2026-11-02, Clasificador con **Fashion MNIST**](https://drive.google.com/file/d/1QAIU5C1K4LhuU2tJZkkG8ZghnI7jMWb6/view?usp=drive_link)
 
 ## Trabajos Practicos
 
