@@ -94,7 +94,7 @@ Clases Lunes y Jueves:
 ## GPT
 
 * [Notas en .PDF](https://github.com/jipphysics/redes-neuronales-2026/blob/main/gpt/main.pdf)
-* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jipphysics/redes-neuronales-2026/blob/main/gpt/gpt_step_by_step_exercises.ipynb)
+* [![Guías de ejercicios para abrir en Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jipphysics/redes-neuronales-2026/blob/main/gpt/gpt_step_by_step_exercises.ipynb)
 
 ## Preguntas frecuentes
 
