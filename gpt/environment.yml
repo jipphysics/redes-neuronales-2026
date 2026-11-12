@@ -1,0 +1,28 @@
+# Conda environment for the problem-set notebooks (code/problem-sets/) and
+# for gpt_intro/ + scripts/.
+#
+#   conda env create -f code/environment.yml
+#   conda activate redes-2026
+#   jupyter lab
+#
+# pytorch-gpu pulls a CUDA build of PyTorch from conda-forge; on a machine
+# without an NVIDIA GPU replace it with `pytorch` (CPU build).
+name: redes-2026
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy
+  - scipy
+  - matplotlib
+  - pandas
+  - scikit-learn
+  - pytorch-gpu>=2.2
+  - torchvision
+  # Recent PyTorch dispatches some small matrix products to Triton kernels,
+  # which are compiled on first use and need cuda.h and ptxas.
+  - cuda-cudart-dev
+  - cuda-nvcc-tools
+  - jupyterlab
+  - ipykernel
+  - ipywidgets
