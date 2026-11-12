@@ -91,6 +91,11 @@ Clases Lunes y Jueves:
 * [Tutorial Guía 9: filminas](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tutoriales/G9_beamer_v8.pdf)
 * [Tutorial Guía 10](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tutoriales/2026-RN-Ayudas_GUIA_10_Autoencoder_FashionMNIST_v7.pdf)
 
+## GPT
+
+* [Notas en .PDF](https://github.com/jipphysics/redes-neuronales-2026/blob/main/gpt/main.pdf)
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jipphysics/redes-neuronales-2026/blob/main/gpt/gpt_step_by_step_exercises.ipynb)
+
 ## Preguntas frecuentes
 
 * **Porqué no recibo notificaciones?** Quienes aún no enviaron email a Pancho para que los incluya en la lista de email deben hacerlo, pues está roto el sistema de aulas virtuales y no podemos sacar de allí los correos electrónicos, y los colegas de despacho de alumnos de grado y de posgrado están saturados como para pedirles los correos electrónicos. Solo será por email y durante las clases, No habrá otro método, por eso queremos tener todos los correos. 
