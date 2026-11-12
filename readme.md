@@ -96,6 +96,15 @@ Clases Lunes y Jueves:
 * [Notas en .PDF](https://github.com/jipphysics/redes-neuronales-2026/blob/main/gpt/main.pdf)
 * [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jipphysics/redes-neuronales-2026/blob/main/gpt/gpt_step_by_step_exercises.ipynb)
 
+### Data
+
+`gpt/tinyshakespeare.txt` is the *Tiny Shakespeare* corpus (about 1 MB, 40,000 lines
+of plays by William Shakespeare), created by Andrej Karpathy for his
+[char-rnn](https://github.com/karpathy/char-rnn) project and introduced in the post
+[*The Unreasonable Effectiveness of Recurrent Neural Networks*](https://karpathy.github.io/2015/05/21/rnn-effectiveness/)
+(2015). The file is an unmodified copy of
+[`data/tinyshakespeare/input.txt`](https://github.com/karpathy/char-rnn/blob/master/data/tinyshakespeare/input.txt)
+
 ## Preguntas frecuentes
 
 * **Porqué no recibo notificaciones?** Quienes aún no enviaron email a Pancho para que los incluya en la lista de email deben hacerlo, pues está roto el sistema de aulas virtuales y no podemos sacar de allí los correos electrónicos, y los colegas de despacho de alumnos de grado y de posgrado están saturados como para pedirles los correos electrónicos. Solo será por email y durante las clases, No habrá otro método, por eso queremos tener todos los correos. 
