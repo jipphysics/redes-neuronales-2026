@@ -98,7 +98,7 @@ Clases Lunes y Jueves:
 
 ### Data
 
-`gpt/tinyshakespeare.txt` is the *Tiny Shakespeare* corpus (about 1 MB, 40,000 lines
+[gpt/data/tinyshakespeare.txt](https://github.com/jipphysics/redes-neuronales-2026/blob/main/gpt/data/tinyshakespeare.txt) is the *Tiny Shakespeare* corpus (about 1 MB, 40,000 lines
 of plays by William Shakespeare), created by Andrej Karpathy for his
 [char-rnn](https://github.com/karpathy/char-rnn) project and introduced in the post
 [*The Unreasonable Effectiveness of Recurrent Neural Networks*](https://karpathy.github.io/2015/05/21/rnn-effectiveness/)
