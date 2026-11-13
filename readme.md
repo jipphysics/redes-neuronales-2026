@@ -100,8 +100,9 @@ Clases Lunes y Jueves:
 ### Dataset para entrenar el modelo GPT
 
 El modelo GPT es entrenado con el *Tiny Shakespeare* corpus [gpt/data/tinyshakespeare.txt](https://github.com/jipphysics/redes-neuronales-2026/blob/main/gpt/data/tinyshakespeare.txt)
-de alrededor de 1 MB o 40,000 líneas de texto de obras de William Shakespeare, creado por Andrej Karpathy para el proyecto [char-rnn](https://github.com/karpathy/char-rnn) e introducido en el posteo [*The Unreasonable Effectiveness of Recurrent Neural Networks*](https://karpathy.github.io/2015/05/21/rnn-effectiveness/) (2015). El archivo es una copia sin modificar de 
-[`data/tinyshakespeare/input.txt`](https://github.com/karpathy/char-rnn/blob/master/data/tinyshakespeare/input.txt).
+de alrededor de 1 MB o 40,000 líneas de texto de obras de William Shakespeare. 
+Fue creado por Andrej Karpathy para el proyecto [char-rnn](https://github.com/karpathy/char-rnn) e introducido en el posteo [*The Unreasonable Effectiveness of Recurrent Neural Networks*](https://karpathy.github.io/2015/05/21/rnn-effectiveness/) (2015).
+Es una copia fiel de [`data/tinyshakespeare/input.txt`](https://github.com/karpathy/char-rnn/blob/master/data/tinyshakespeare/input.txt).
 
 ## Preguntas frecuentes
 
