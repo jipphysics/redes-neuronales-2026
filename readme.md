@@ -99,12 +99,9 @@ Clases Lunes y Jueves:
 
 ### Data
 
-[gpt/data/tinyshakespeare.txt](https://github.com/jipphysics/redes-neuronales-2026/blob/main/gpt/data/tinyshakespeare.txt) is the *Tiny Shakespeare* corpus (about 1 MB, 40,000 lines
-of plays by William Shakespeare), created by Andrej Karpathy for his
-[char-rnn](https://github.com/karpathy/char-rnn) project and introduced in the post
-[*The Unreasonable Effectiveness of Recurrent Neural Networks*](https://karpathy.github.io/2015/05/21/rnn-effectiveness/)
-(2015). The file is an unmodified copy of
-[`data/tinyshakespeare/input.txt`](https://github.com/karpathy/char-rnn/blob/master/data/tinyshakespeare/input.txt)
+El modelo GPT es entrenado con el *Tiny Shakespeare* corpus [gpt/data/tinyshakespeare.txt](https://github.com/jipphysics/redes-neuronales-2026/blob/main/gpt/data/tinyshakespeare.txt)
+de alrededor de 1 MB o 40,000 líneas de texto de obras de William Shakespeare, creado por Andrej Karpathy para el proyecto [char-rnn](https://github.com/karpathy/char-rnn) e introducido en el posteo [*The Unreasonable Effectiveness of Recurrent Neural Networks*](https://karpathy.github.io/2015/05/21/rnn-effectiveness/) (2015). El archivo es una copia sin modificar de 
+[`data/tinyshakespeare/input.txt`](https://github.com/karpathy/char-rnn/blob/master/data/tinyshakespeare/input.txt).
 
 ## Preguntas frecuentes
 
