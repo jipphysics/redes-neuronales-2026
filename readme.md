@@ -63,6 +63,7 @@ Clases Lunes y Jueves:
 * [Clase 18, 2026-10-23, Autoencoder con **Fashion MNIST**, cont. 1](https://drive.google.com/file/d/1Ff5ONSXaZUwXylBPHsdMlyRvzZ02bDSx/view?usp=drive_link)
 * [Clase 19, 2026-10-29, Autoencoder con **Fashion MNIST**, cont. 2](https://drive.google.com/file/d/1b6TMgs5lg07mTfoOtBCH0qSAOVrknuy-/view?usp=sharing)
 * [Clase 20, 2026-11-02, Clasificador con **Fashion MNIST**](https://drive.google.com/file/d/1QAIU5C1K4LhuU2tJZkkG8ZghnI7jMWb6/view?usp=drive_link)
+* [Clase 21, 2026-11-12, Clasificador con **Fashion MNIST**, cont. 1](https://drive.google.com/file/d/1Tbrt74DkaGMpa2w-Tkv4SX74basJEBgC/view?usp=sharing)
 
 ## Trabajos Practicos
 
