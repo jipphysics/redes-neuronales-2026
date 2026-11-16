@@ -91,6 +91,8 @@ Clases Lunes y Jueves:
 * [Tutorial Guía 9: perceptrón simple](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tutoriales/tutorial_perceptron_OR_v2.pdf)
 * [Tutorial Guía 9: filminas](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tutoriales/G9_beamer_v8.pdf)
 * [Tutorial Guía 10](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tutoriales/2026-RN-Ayudas_GUIA_10_Autoencoder_FashionMNIST_v7.pdf)
+* [Filminas Guía 10](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tutoriales/2026-RN-Fundamentos_Autoencoder_FashionMNIST_Beamer_v4.pdf)
+* [Filminas TP2](https://github.com/jipphysics/redes-neuronales-2026/blob/main/tutoriales/2026-RN-Fundamentos_Clasificacion_FashionMNIST_Beamer_v3b.pdf)
 
 ## GPT
 
