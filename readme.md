@@ -38,6 +38,7 @@ Clases Lunes y Jueves:
 * [Guía 9, 2026-10-05, Perceptrón simple](https://colab.research.google.com/drive/1r9mR9jnaiAL6T2lIfoNxI7zWXo_GN2hn?usp=drive_link)
 * [Guía 10, 2026-10-22, Autoencoder con **Fashion MNIST**](https://colab.research.google.com/drive/10KCPjK_BBy22YEy2NGan1cGnmxILep-a?usp=drive_link)
 * [Guía 11, 2026-11-02, Clasificador con **Fashion MNIST**](https://drive.google.com/file/d/17jb0y0AjVNEkUpV1WrvePu1kSgw_gtRe/view?usp=drive_link)
+* [Guía 12, 2026-11-19, Autoencoder convolucional con **Fashion MNIST**](https://drive.google.com/file/d/1UTN8RZ2Aw_TAmTW5u8LolPkzh9VvdYYi/view?usp=drive_link)
 
 ## Videos a las clases
 
